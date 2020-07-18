@@ -22,42 +22,42 @@ public class TestStringMethod {
 
 	@Test
 	public void testLowerMethod() {
-		assertEquals("hai", sm.lower("HaI"));
-		assertEquals("1234", sm.lower("1234"));
-		assertEquals("hai&hello", sm.lower("hai&HELLO"));
-		assertEquals("welcome", sm.lower("welcome"));
+		assertEquals("hai", sm.lowerCase("HaI"));
+		assertEquals("1234", sm.lowerCase("1234"));
+		assertEquals("hai&hello", sm.lowerCase("hai&HELLO"));
+		assertEquals("welcome", sm.lowerCase("welcome"));
 		try {
-			sm.lower("");
+			sm.lowerCase("");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("No input is given");
+			System.out.println("No input is given");
 			e.printStackTrace();
 		}
 	}
 
 	@Test
 	public void testUpperMethod() {
-		assertEquals("HAI", sm.upper("HAI"));
-		assertEquals("1234", sm.upper("1234"));
-		assertEquals("HAI&HELLO", sm.upper("hai&HELLO"));
-		assertEquals("WELCOME", sm.upper("welcome"));
+		assertEquals("HAI", sm.upperCase("HAI"));
+		assertEquals("1234", sm.upperCase("1234"));
+		assertEquals("HAI&HELLO", sm.upperCase("hai&HELLO"));
+		assertEquals("WELCOME", sm.upperCase("welcome"));
 		try {
-			sm.upper("");
+			sm.upperCase("");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("No input is given");
+			System.out.println("No input is given");
 			e.printStackTrace();
 		}
 	}
 
 	@Test
 	public void testFirstCharacterMethod() {
-		assertEquals("1", sm.firstCharacter("1.hai"));
-		assertEquals("@", sm.firstCharacter("@hai"));
-		assertEquals(" ", sm.firstCharacter(" hai"));
-		assertEquals("h", sm.firstCharacter("hai"));
+		assertEquals("1", sm.firstChar("1.hai"));
+		assertEquals("@", sm.firstChar("@hai"));
+		assertEquals(" ", sm.firstChar(" hai"));
+		assertEquals("h", sm.firstChar("hai"));
 		try {
-			sm.firstCharacter(" ");
+			sm.firstChar(" ");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("No input is given");
+			System.out.println("No input is given");
 			e.printStackTrace();
 		}
 	}
@@ -71,20 +71,20 @@ public class TestStringMethod {
 		try {
 			sm.length("");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("No input is given");
+			System.out.println("No input is given");
 			e.printStackTrace();
 		}
 	}
 
 	@Test
 	public void testTrimMethod() {
-		assertEquals("Java", sm.trim(" Java "));
-		assertEquals("Ja va", sm.trim("Ja va "));
-		assertEquals("Java", sm.trim("  Java  "));
+		assertEquals("Java", sm.trimStr(" Java "));
+		assertEquals("Ja va", sm.trimStr("Ja va "));
+		assertEquals("Java", sm.trimStr("  Java  "));
 		try {
-			sm.trim("");
+			sm.trimStr("");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("No input is given");
+			System.out.println("No input is given");
 			e.printStackTrace();
 		}
 	}

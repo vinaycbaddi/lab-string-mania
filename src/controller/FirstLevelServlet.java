@@ -51,24 +51,24 @@ public class FirstLevelServlet extends HttpServlet {
 
 		if (seeAnswer != null) {
 			if (lowerCase != null) {
-				String output = string.lower(input);
-				// System.out.println(output);
+				String output = string.lowerCase(input);
+				 System.out.println(output);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
 			}
-			/*
-			 * else { input = null; String output = string.lower(input);
-			 * //System.out.println(output); request.setAttribute("output", output);
-			 * RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
-			 * "/WEB-INF/views/firstlevel.jsp"); rd.forward(request, response); }
-			 */
+			
+			  else { input = null; String output = string.lowerCase(input);
+			  System.out.println(output); request.setAttribute("output", output);
+			  RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
+			  "/WEB-INF/views/firstlevel.jsp"); rd.forward(request, response); }
+			 
 
 		}
 
 		if (seeAnswer != null) {
 			if (upperCase != null) {
-				String output = string.upper(input);
+				String output = string.upperCase(input);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
@@ -77,7 +77,7 @@ public class FirstLevelServlet extends HttpServlet {
 
 		if (seeAnswer != null) {
 			if (firstCharacter != null) {
-				String output = string.firstCharacter(input);
+				String output = string.firstChar(input);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
@@ -95,7 +95,7 @@ public class FirstLevelServlet extends HttpServlet {
 
 		if (seeAnswer != null) {
 			if (trim != null) {
-				String output = string.trim(input);
+				String output = string.trimStr(input);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);

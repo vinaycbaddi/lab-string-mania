@@ -1,6 +1,6 @@
 package testing;
 
-/* Uncomment the below code to test your application
+// Uncomment the below code to test your application
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -34,7 +34,7 @@ public class TestStringBoolean {
 			sb.contains("Java", "");
 			sb.contains("", "Java");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("null");
+			System.out.println("null");
 			e.printStackTrace();
 		}
 	}
@@ -49,7 +49,7 @@ public class TestStringBoolean {
 			sb.endsWith("java", "");
 			sb.endsWith("", "java");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("null");
+			System.out.println("null");
 			e.printStackTrace();
 		}
 	}
@@ -64,7 +64,7 @@ public class TestStringBoolean {
 			sb.startsWith("java", "");
 			sb.startsWith("", "java");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("null");
+			System.out.println("null");
 			e.printStackTrace();
 		}
 	}
@@ -79,7 +79,7 @@ public class TestStringBoolean {
 			sb.equals("java", "");
 			sb.equals("", "java");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("null");
+			System.out.println("null");
 			e.printStackTrace();
 		}
 	}
@@ -94,9 +94,9 @@ public class TestStringBoolean {
 			sb.equals("java", "");
 			sb.equals("", "java");
 		} catch (IllegalArgumentException e) {
-			// System.out.println("null");
+			System.out.println("null");
 			e.printStackTrace();
 		}
 	}
 }
-*/
+
